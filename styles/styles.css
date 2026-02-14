@@ -1,0 +1,231 @@
+/* default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0e0e0e;
+    color: white;
+    line-height: 1.6;
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #111;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    color: orange;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    color: orange;
+}
+
+/* buttons */
+.btn {
+    background: orange;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-outline {
+    border: 1px solid orange;
+    background: transparent;
+    color: orange;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* hero */
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 40px;
+    flex-wrap: wrap;
+}
+
+.hero-text h1 {
+    color: orange;
+    font-size: 42px;
+}
+
+.subtitle {
+    color: #aaa;
+}
+
+.hero-img img {
+    width: 300px;
+    border-radius: 50%;
+
+}
+
+/* sections */
+section {
+    padding: 70px 40px;
+    text-align: center;
+}
+
+.section-desc {
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+/* cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 12px;
+    width: 260px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border: 1px solid orange;
+}
+
+/* section about */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.about img {
+    width: 250px;
+    border-radius: 12px;
+}
+
+/* section interest */
+.interest-card {
+    text-align: center;
+}
+
+
+/* contact */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+/* footer */
+footer {
+    background: #111;
+    padding: 25px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* social bar */
+.social-bar {
+    position: fixed;
+    top: 40%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.social-bar a {
+    text-decoration: none;
+    color: white;
+    background: #1a1a1a;
+    padding: 12px 15px;
+    margin: 3px 0;
+    font-size: 14px;
+    border-left: 3px solid orange;
+    transition: 0.3s;
+}
+
+.social-bar a:hover {
+    background: orange;
+    transform: translateX(5px);
+}
+
+
+/* responsive */
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .social-bar {
+        flex-direction: row;
+        bottom: 0;
+        top: auto;
+        width: 100%;
+        justify-content: center;
+        background: #111;
+    }
+
+    .social-bar a {
+        border-left: none;
+        border-top: 3px solid orange;
+        margin: 0;
+        flex: 1;
+        text-align: center;
+    }
+
+}
